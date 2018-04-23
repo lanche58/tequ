@@ -177,7 +177,7 @@
             <div class="ix-title">
                 <p class="ch">新闻中心</p>
                 <p class="en">News Center</p>
-                <span class="aico"></span>
+                <span class="it-aw aico"></span>
             </div>
             <div class="ix-news clearfix">
                 <div class="item">
@@ -240,7 +240,68 @@
         </div>
         <!-- ix1 -->
         <div class="ix2">
-            
+            <ul class="ix-pro clearfix">
+                <li><a href="pro.html">
+                    <div class="pic2" style="background-image: url(img/ix_img3.jpg);"></div>
+                    <div class="txts">
+                        <div class="pa">
+                            <span class="ico" style="background-image: url(img/ip_ico1.png);"></span>
+                            <p class="ch">饲料产业</p>
+                            <p class="en">Real Estate Tourism</p>
+                            <div class="tx">新农业投资事业部成立于2012年，是集团在传统的饲料及养殖业务发展壮大以后，致力于打造世界一流的农业创新、创业平台；运用新思想、新理念和新运作模式</div>
+                            <div class="ip-aw"><span class="it-aw it-aw-2 aico"></span><span class="line"></span></div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="pro.html">
+                    <div class="pic2" style="background-image: url(img/ix_img4.jpg);"></div>
+                    <div class="txts">
+                        <div class="pa">
+                            <span class="ico" style="background-image: url(img/ip_ico2.png);"></span>
+                            <p class="ch">新农业</p>
+                            <p class="en">Real Estate Tourism</p>
+                            <div class="tx">新农业投资事业部成立于2012年，是集团在传统的饲料及养殖业务发展壮大以后，致力于打造世界一流的农业创新、创业平台；运用新思想、新理念和新运作模式</div>
+                            <div class="ip-aw"><span class="it-aw it-aw-2 aico"></span><span class="line"></span></div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="pro.html">
+                    <div class="pic2" style="background-image: url(img/ix_img5.jpg);"></div>
+                    <div class="txts">
+                        <div class="pa">
+                            <span class="ico" style="background-image: url(img/ip_ico4.png);"></span>
+                            <p class="ch">新农业</p>
+                            <p class="en">Real Estate Tourism</p>
+                            <div class="tx">新农业投资事业部成立于2012年，是集团在传统的饲料及养殖业务发展壮大以后，致力于打造世界一流的农业创新、创业平台；运用新思想、新理念和新运作模式</div>
+                            <div class="ip-aw"><span class="it-aw it-aw-2 aico"></span><span class="line"></span></div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="pro.html">
+                    <div class="pic2" style="background-image: url(img/ix_img6.jpg);"></div>
+                    <div class="txts">
+                        <div class="pa">
+                            <span class="ico" style="background-image: url(img/ip_ico5.png);"></span>
+                            <p class="ch">地产旅游</p>
+                            <p class="en">Real Estate Tourism</p>
+                            <div class="tx">新农业投资事业部成立于2012年，是集团在传统的饲料及养殖业务发展壮大以后，致力于打造世界一流的农业创新、创业平台；运用新思想、新理念和新运作模式</div>
+                            <div class="ip-aw"><span class="it-aw it-aw-2 aico"></span><span class="line"></span></div>
+                        </div>
+                    </div>
+                </a></li>
+                <li><a href="pro.html">
+                    <div class="pic2" style="background-image: url(img/ix_img7.jpg);"></div>
+                    <div class="txts">
+                        <div class="pa">
+                            <span class="ico" style="background-image: url(img/ip_ico6.png);"></span>
+                            <p class="ch">贸易事业部</p>
+                            <p class="en">Real Estate Tourism</p>
+                            <div class="tx">新农业投资事业部成立于2012年，是集团在传统的饲料及养殖业务发展壮大以后，致力于打造世界一流的农业创新、创业平台；运用新思想、新理念和新运作模式</div>
+                            <div class="ip-aw"><span class="it-aw it-aw-2 aico"></span><span class="line"></span></div>
+                        </div>
+                    </div>
+                </a></li>
+            </ul>
         </div>
         <!-- ix2 -->
     </div>
@@ -320,6 +381,45 @@
             arrows: false,
             dots: true
         });
+        $('.ix-pro li').eq(2).addClass('act').css({ width: 0.52*$('.ix-pro').width() });
+        $('.ix-pro .txts').css({ width: 0.52*$('.ix-pro').width() });
+        var min_w = $('.ix-pro li').eq(0).width(),
+            max_w = $('.ix-pro li').eq(2).width(),
+            ciw = [],
+            timer;
+        $('.ix-pro li').each(function(index, el) {
+            ciw[index] = min_w;
+        });
+        function changeWidth(o,c){
+            $('.ix-pro li').removeClass('act act2');
+            $('.ix-pro li').eq(o).addClass('act2');
+            $('.ix-pro li').eq(c).addClass('act');
+
+            ciw[o] = ciw[o] - 10;
+            if(ciw[o] < min_w){ ciw[o] = min_w; }
+            $('.ix-pro li').eq(o).css({ width: ciw[o] });
+            ciw[c] = ciw[c] + 10;
+            if(ciw[c] > max_w){ ciw[c] = max_w; }
+            $('.ix-pro li').eq(c).css({ width: ciw[c] });
+            if(ciw[c] == max_w){ return; }
+            timer = setTimeout(function(){
+                changeWidth(o,c);
+            },5);
+        };
+        $('.ix-pro li').mouseenter(function() {
+            var o = $('.ix-pro .act').index(), 
+                c = $(this).index(),
+                t = $('.ix-pro .act2').index();
+            if(o == c){ return; }
+            clearTimeout(timer);
+            ciw[o] = max_w;
+            $('.ix-pro li').eq(o).css({ width: ciw[o] });
+            if(t>=0){
+                ciw[t] = min_w;
+                $('.ix-pro li').eq(t).css({ width: ciw[t] });
+            }
+            changeWidth(o,c);
+        });   
     })
 </script>
 </body>

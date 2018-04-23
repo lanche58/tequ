@@ -212,6 +212,8 @@ a:hover {
 	display:block; 
 	overflow:hidden; 
 	position:relative; 
+	background-repeat: no-repeat;
+	background-position: center center;
 	}
 .pic > img{ 
 	display:block; 
@@ -538,7 +540,8 @@ a:hover {
 .ix-pa{ padding-left: 12%; padding-right: 12%; }
 .ix-title .ch{ font-size: 22px; color: #333; }
 .ix-title .en{ margin-top: 5px; font-size: 18px; color: #df2128; text-transform: capitalize; }
-.ix-title .aico{ margin-top: 15px; width: 19px; height: 20px; background-position: -100px -100px; border: 2px solid #999; }
+.ix-title .it-aw{ margin-top: 15px; }
+.it-aw{ width: 19px; height: 20px; background-position: -100px -100px; border: 2px solid #999; }
 .ix1 .ix-title{ float: left; width: 13%; }
 .ix-news{ float: right; width: 87%; }
 .ix-news .item{ float: left; width: 33.33%; }
@@ -557,3 +560,27 @@ a:hover {
 .in-tx .date{ margin-top: 45px; }
 .ix-news .slick-dots{ position: absolute; top: 28%; right: -85px; }
 .ix-news .slick-dots li{ display: block; margin: 0 0 12px 0;  }
+.ix2{ margin-top: 85px; }
+.ix-pro li{ float: left; position: relative; width: 12%; overflow: hidden; }
+.ix-pro a{ color: #fff; }
+.ix-pro .pic2{ height: 435px; }
+.ix-pro .pic2:after{ content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: url('../images/black.png'); background: rgba(0, 0, 0, .4); }
+.ix-pro li:nth-child(1) .pic2:after{ background: rgba(135, 115, 74, .75); }
+.ix-pro li:nth-child(2) .pic2:after{ background: rgba(2, 14, 80, .6); }
+.ix-pro li:nth-child(3) .pic2:after{ background: rgba(2, 49, 31, .45); }
+.ix-pro .txts{ position: absolute; left: 0; top: 0; }
+.ix-pro .pa{ padding: 15% 55px 0 55px; }
+.ix-pro .ico{ height: 60px; background-position: left bottom; }
+.ix-pro .ch{ margin-top: 12px; font-size: 16px; }
+.ix-pro .en{ margin-top: 12px; font-size: 12px; transform: translateY(20px); opacity: 0; visibility: hidden; transition: 600ms; }
+.ix-pro .tx{ margin-top: 62px; height: 48px; transform: translateX(50%); opacity: 0; visibility: hidden; transition: 1200ms; }
+.it-aw-2{ border-color: #fff; background-position: -81px -100px; }
+.ip-aw{ display: inline-block; vertical-align: bottom; position: relative; width: 50%; height: 24px; overflow: hidden; opacity: 0; visibility: hidden; transition: 1200ms; }
+.ip-aw .line{ height: 1px; margin: 10px 38px 0 0; background: #fff; background: rgba(255, 255, 255, .6); }
+.ip-aw .it-aw{ position: absolute; top: 0; right: 0; }
+.ix-pro li.act .en{ transform: translateY(0); opacity: 1; visibility: visible; transition-delay: 300ms; }
+.ix-pro li.act .tx{ transform: translateY(0); opacity: 1; visibility: visible; transition-delay: 400ms; }
+.ix-pro li.act .ip-aw{ width: 100%; opacity: 1; visibility: visible; transition-delay: 400ms; } 
+
+
+
