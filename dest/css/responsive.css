@@ -29,6 +29,8 @@
 .h-link a:hover .aico{ background-position: -185px -60px; }
 .h-lang a:hover{ background: #df2128; color: #fff; }
 .tnav > a:hover{ background: #df2128; color: #fff; }
+.video-box:hover .bico{ transform: scale(0.9); }
+.in-tx:hover .ti{ color: #df2128; }
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */
 @media screen and (max-width:1600px){} /* 1600 */

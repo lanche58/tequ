@@ -163,6 +163,7 @@ a:hover {
 }
 .container{
 	min-height: 1000px;
+	background: #f5f5f5;
 }
 .pw {
     width: 1200px;
@@ -374,9 +375,9 @@ a:hover {
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 .slick-arrow.slick-hidden { display: none; }
 .slick-dots{ font-size:0; text-align:center; }
-.slick-dots li{ width:11px; height:11px; border: 1px solid #fff; border-radius:100%; margin:0 6px; display: inline-block;*zoom: 1;*display: inline; vertical-align:middle; transition: 300ms; -webkit-transition: 300ms;  }
+.slick-dots li{ width:11px; height:11px; background: #c3c2b9; border-radius:100%; margin:0 6px; display: inline-block;*zoom: 1;*display: inline; vertical-align:middle; transition: 300ms; -webkit-transition: 300ms;  }
 .slick-dots li a{ display:block; width:100%; height:100%; }
-/* .slick-dots li.slick-active,.slick-dots li:hover{ background:#fff !important;  } */
+.slick-dots li.slick-active,.slick-dots li:hover{ background:#df2128;  }
 /* slick end */
 
 /* animation */
@@ -480,6 +481,10 @@ a:hover {
 	80% { transform: skewX(-5deg); opacity: 1; }
 	to { transform: none; opacity: 1; }
 } /* 倾斜出现 */
+@keyframes fadeDown{
+	0%{ opacity: 1; transform: translateY(-3px); }
+	100%{ opacity: 0; transform: translateY(3px); }
+} /* 上到下消失 */
 /* animation end */
 
 
@@ -508,14 +513,14 @@ a:hover {
 .h-lang a + a{ margin-left: 8px; }
 .h-lang{ margin-left: 15px; }
 .mtop{ height: 80px }
-
 .banner-fix{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; }
+.banner-fix .cover{ display: none; opacity: 0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; background: url('../images/ix_bg.png'); }
 .banner-ctt{ position: relative; margin-top: 80px; }
 .banner{ position: relative; height: 100%; overflow: hidden; }
 .banner .item{ position: relative; overflow: hidden; }
 .banner .pic2{ position: absolute; top: 0; left: 0; }
 .banner .slick-active .pic2 img{ animation: scaleUpDown 5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940); }
-.bannertxts{ position: absolute; left: 0; right: 0; bottom: 35%; z-index: 29; margin-bottom: 75px; padding: 0 5%; color: #fff; }
+.bannertxts{ position: absolute; left: 0; right: 0; bottom: 35%; margin-bottom: 75px; padding: 0 5%; color: #fff; }
 .bannertxts .img img{ display: inline-block; vertical-align: bottom; }
 .bannertxts .ch{ margin-top: 25px; font-size: 60px; }
 .bannertxts .en{ margin-top: 20px; font-size: 18px; line-height: 1.4; }
@@ -523,5 +528,32 @@ a:hover {
 .banner .slick-dots li{ width: 6px; height: 6px; margin: 0 5px; background: #fff; border: 2px solid #fff; }
 .banner .slick-dots li.slick-active,
 .banner .slick-dots li:hover{ background-color: transparent; }
-.banner-line{ position: absolute; left: 50%; margin-left: -250px; bottom: 35%; margin-bottom: 35px; z-index: 59; width: 500px; height: 1px; background: #fff; }
+.banner-line{ position: absolute; left: 50%; margin-left: -250px; bottom: 35%; margin-bottom: 35px; width: 500px; height: 1px; background: #fff; }
 .banner-line .line{ position: absolute; top: 0; bottom: 0; left: 0; background: #df2128; width: 100%; }
+.ix-main{ position: relative; z-index: 9; margin-top: -60px; padding: 5.83% 0 4.69% 0; background: #fff; min-height: 1000px; }
+.banner-mouse{ position: absolute; top: -15px; left: 50%; z-index: 19; margin-left: -50px; width: 100px; font-size: 12px; cursor: pointer; text-align: center; }
+.banner-mouse .mouse{ display: inline-block; vertical-align: bottom; position: relative; width: 20px; height: 32px; margin-bottom: 4px; border-radius: 5px; border: 2px solid #df2128; }
+.banner-mouse .mouse:before{ content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 13px; background: #df2128; }
+.banner-mouse .mouse:after{ content: ""; position: absolute; left: 50%; margin-left: -1px; bottom: 8px; width: 2px; height: 6px; background: #df2128; animation: fadeDown 1.6s infinite;  }
+.ix-pa{ padding-left: 12%; padding-right: 12%; }
+.ix-title .ch{ font-size: 22px; color: #333; }
+.ix-title .en{ margin-top: 5px; font-size: 18px; color: #df2128; text-transform: capitalize; }
+.ix-title .aico{ margin-top: 15px; width: 19px; height: 20px; background-position: -100px -100px; border: 2px solid #999; }
+.ix1 .ix-title{ float: left; width: 13%; }
+.ix-news{ float: right; width: 87%; }
+.ix-news .item{ float: left; width: 33.33%; }
+.ix-news .pa{ padding: 0 30px; border-right: 1px solid #ccc; }
+.ix-news .item:nth-child(3n) .pa{ border: none; }
+.video-box{ position: relative; cursor: pointer; }
+.video-box .bico{ position: absolute; top: 50%; left: 50%; margin-top: -27px; margin-left: -27px; width: 53px; height: 53px; background-position: -92px 0px; transition: 400ms; }
+.in-img{ display: block; position: relative; color: #fff; }
+.in-img .txts{ position: absolute; left: 0; right: 0; bottom: 0; padding: 13px 25px; background: url('../images/black.png'); background: rgba(0, 0, 0, .6); }
+.in-img .tx{ line-height: 20px; max-height: 40px; }
+.in-tx{ display: block; font-size: 13px; color: #999; }
+.in-tx .tx{ height: 48px; }
+.in-tx .ti{ font-size: 16px; color: #666; }
+.in-tx .date .s{ margin-left: 10px; color: #df2128; }
+.in-tx .xtx{ margin-top: 30px; }
+.in-tx .date{ margin-top: 45px; }
+.ix-news .slick-dots{ position: absolute; top: 28%; right: -85px; }
+.ix-news .slick-dots li{ display: block; margin: 0 0 12px 0;  }

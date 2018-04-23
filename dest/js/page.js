@@ -160,6 +160,22 @@ $(function () {
 			setScroll("#" + hash);
 		}
 	};
+	$('.vwrap .close,.vwrap .videobtg').bind(_click,function(){
+        objplay.stop(); 
+        $('.vwrap').hide();
+        $('#videobox').html('');
+    });
+	$('.video-btn').bind(_click, function() {
+        var $img = $(this).data('img');
+        var $video = $(this).data('video');
+        Video.load({
+            vcontainer: 'videobox',
+            vfimg: $img,
+            vfiles: $video,
+            isautoplay: 'true'
+        });
+        $('.vwrap').fadeIn();
+    });
 });
 $(document).on('click','.overlayClose',function(){
  	$('.imgShowBox').removeClass('img-show');
