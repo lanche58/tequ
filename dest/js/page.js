@@ -60,6 +60,18 @@ $(window).resize(function () {
     pageBox();
 });
 $(function () {
+	changeTop();
+	function changeTop(){
+		var st = $(window).scrollTop();
+		if(st<1){
+			$('#top').addClass('act');
+		}else{
+			$('#top').removeClass('act');
+		}
+	};
+	$('#top').bind(_click, function() {
+		$('html,body').stop().animate({scrollTop: 0}, 800);
+	});
 	var isopen = 0;
 	$('.flinkmore .t').bind(_click, function(){
 		if(isopen==0){
@@ -77,36 +89,39 @@ $(function () {
 		$('.flinkmore .t').removeClass('act');
 		$('.flinkmore ul').stop().slideUp(300);
 	});
+
 	$(window).scroll(function () {
 		var windowTop = $(window).scrollTop();
 		if (windowTop < w_height && !isMobile) {
 			$('.pbanner .pic2 img').css('transform', "translate(0px," + (windowTop) / 1.5 + "px)");
 		};
-		changeHeader();
-		changePnav();
+		// changeHeader();
+		// changePnav();
+
+		changeTop();
     });
-    function changeHeader(){
-		var ST = $(window).scrollTop();
-		if(!isMobile){
-			if( ST > 1 ){
-				$('.header').addClass('sheader');
-			}else{
-				$('.header').removeClass('sheader');
-			}
-		}
-	};
-	changeHeader();
-	function changePnav(){
-		var ST = $(window).scrollTop();
-		if(!isMobile&&$('.pvpos').size()!=0){
-			if( ST > $('.pvpos').offset().top - $('.pnav').height() ){
-				$('.pnav').addClass('spnav');
-			}else{
-				$('.pnav').removeClass('spnav');
-			}
-		}
-	};
-	changePnav();
+ //    function changeHeader(){
+	// 	var ST = $(window).scrollTop();
+	// 	if(!isMobile){
+	// 		if( ST > 1 ){
+	// 			$('.header').addClass('sheader');
+	// 		}else{
+	// 			$('.header').removeClass('sheader');
+	// 		}
+	// 	}
+	// };
+	// changeHeader();
+	// function changePnav(){
+	// 	var ST = $(window).scrollTop();
+	// 	if(!isMobile&&$('.pvpos').size()!=0){
+	// 		if( ST > $('.pvpos').offset().top - $('.pnav').height() ){
+	// 			$('.pnav').addClass('spnav');
+	// 		}else{
+	// 			$('.pnav').removeClass('spnav');
+	// 		}
+	// 	}
+	// };
+	// changePnav();
 	$('.navMobile dd p a').bind(_click, function (e) {
 		if($(this).parent().next('.mtnav').size() >= 1){
 			if(!$(this).hasClass('act')){
