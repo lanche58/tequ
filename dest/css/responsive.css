@@ -31,6 +31,8 @@
 .tnav > a:hover{ background: #df2128; color: #fff; }
 .video-box:hover .bico{ transform: scale(0.9); }
 .in-tx:hover .ti{ color: #df2128; }
+.ia-more a:hover{ background: #fff; color: #df2128; }
+.footer a:hover{ color: #df2128; }
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */
 @media screen and (max-width:1600px){} /* 1600 */

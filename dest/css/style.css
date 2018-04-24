@@ -161,6 +161,9 @@ a:hover {
 .clearfix:after {
     clear: both;
 }
+.na{
+	cursor: default;
+}
 .container{
 	min-height: 1000px;
 	background: #f5f5f5;
@@ -182,15 +185,15 @@ a:hover {
 	left: 0; 
 	right: 0; 
 	z-index: 1005; 
-	background: #fff;
+	background: #f5f5f5;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.5);
 	        box-shadow: 0 0 5px rgba(0,0,0,.5);
 	height: 80px;
 	}
 .menuBox{
 	position:fixed;
-	width:100%;
-	top:-100%;
+	width:320px;
+	top:0;
 	right:0;
 	height:100%;
 	background:#eee;
@@ -198,7 +201,7 @@ a:hover {
 	overflow: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	display:none;
+	/* display:none; */
 	}
 .logo{ 
 	display:block; 
@@ -562,14 +565,15 @@ a:hover {
 .ix-news .slick-dots li{ display: block; margin: 0 0 12px 0;  }
 .ix2{ margin-top: 85px; }
 .ix-pro li{ float: left; position: relative; width: 12%; overflow: hidden; }
+.ix-pro li:nth-child(3){ width: 52%; }
 .ix-pro a{ color: #fff; }
 .ix-pro .pic2{ height: 435px; }
 .ix-pro .pic2:after{ content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: url('../images/black.png'); background: rgba(0, 0, 0, .4); }
 .ix-pro li:nth-child(1) .pic2:after{ background: rgba(135, 115, 74, .75); }
 .ix-pro li:nth-child(2) .pic2:after{ background: rgba(2, 14, 80, .6); }
 .ix-pro li:nth-child(3) .pic2:after{ background: rgba(2, 49, 31, .45); }
-.ix-pro .txts{ position: absolute; left: 0; top: 0; }
-.ix-pro .pa{ padding: 15% 55px 0 55px; }
+.ix-pro .txts{ position: absolute; left: 0; top: 0; width: 100%; }
+.ix-pro .pa{ padding: 110px 50px 0 50px; }
 .ix-pro .ico{ height: 60px; background-position: left bottom; }
 .ix-pro .ch{ margin-top: 12px; font-size: 16px; }
 .ix-pro .en{ margin-top: 12px; font-size: 12px; transform: translateY(20px); opacity: 0; visibility: hidden; transition: 600ms; }
@@ -578,9 +582,68 @@ a:hover {
 .ip-aw{ display: inline-block; vertical-align: bottom; position: relative; width: 50%; height: 24px; overflow: hidden; opacity: 0; visibility: hidden; transition: 1200ms; }
 .ip-aw .line{ height: 1px; margin: 10px 38px 0 0; background: #fff; background: rgba(255, 255, 255, .6); }
 .ip-aw .it-aw{ position: absolute; top: 0; right: 0; }
+.ix-pro li.act .ch{ font-size: 24px; }
 .ix-pro li.act .en{ transform: translateY(0); opacity: 1; visibility: visible; transition-delay: 300ms; }
 .ix-pro li.act .tx{ transform: translateY(0); opacity: 1; visibility: visible; transition-delay: 400ms; }
 .ix-pro li.act .ip-aw{ width: 100%; opacity: 1; visibility: visible; transition-delay: 400ms; } 
+.ia-tx .ix-title{ float: left; max-width: 34%; }
+.ia-tx .freeTx{ float: right; width: 66%; }
+.ix-ab a{ display: block; position: relative; margin-right: 20px; color: #fff; }
+.ix-ab .txts{ position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 30px; background: url('../images/black.png'); }
+.ia-ti{ display: inline-block; vertical-align: bottom; position: relative; padding-right: 38px; height: 24px; max-width: 100%; font-size: 22px; }
+.ia-ti .nowti{ line-height: 24px; }
+.ia-ti .it-aw{ position: absolute; top: 0; right: 0; }
+.ia-box{ display: table; width: 100%; }
+.ia-box > div{ display: table-cell; vertical-align: top; }
+.ia-box .ix-ab{ width: 56%; }
+.ia-box .ix-join{ width: 44%; }
+.ix-join{ background: #df2128 url('../images/ix_bg1.png') no-repeat left top/cover; color: #fff; }
+.ix-join a{ color: #fff; }
+.ix-join .txts{ padding: 65px 50px 0 50px; }
+.ix-join .tx{ font-size: 15px; line-height: 30px; max-height: 120px; }
+.ia-more a{ display: inline-block; vertical-align: bottom; width: 126px; height: 36px; border: 2px solid #fff; line-height: 36px; text-align: center; }
+.ix-join .ia-more{ margin-top: 75px; }
+.ix3 .ia-box{ margin-top: 60px; }
+.ix3{ padding-top: 80px; }
+.footer{ position: relative; z-index: 9; background: #54585a; color: #c1c8cb; }
+.footer a{ color: #c1c8cb; }
+.f-nav{ float: left; }
+.f-nav + .f-nav{ margin-left: 3.29%; } 
+.f-nav a{ display: block; line-height: 30px; }
+.f-nav a:first-child{ margin-bottom: 15px; font-size: 16px; color: #fff; }
+.f-ma{ float: right; width: 132px; }
+.f-ma .pic{ margin-bottom: 7px; }
+.footer .ft{ padding: 50px 0 20px; }
+.footer .fb{ padding: 30px 0 50px; line-height: 22px; border-top: 1px solid #43484b; }
+.flinkmore{ position: relative; width: 225px; }
+.flinkmore .t{ position: relative; height: 40px; line-height: 40px; padding: 0 35px 0 20px; cursor: pointer; background: #3f4345; }
+.flinkmore .t:before{ content: ""; position: absolute; right: 20px; top: 50%; margin-top: -3px; width: 12px; height: 6px; background:url('../images/aicos.png') no-repeat -139px -100px; -webkit-transition: 300ms; transition: 300ms; }
+.flinkmore .t.act:before{ -webkit-transform:rotate(180deg); transform:rotate(180deg); }
+.flinkmore ul{ display: none; overflow: auto; position: absolute; bottom: 100%; left: 0; right: 0; z-index: 99; background: #3f4345; max-height:330px; }
+.flinkmore li a{ display: block; padding: 6px 20px; }
+.flinkmore .nowti{ line-height: 24px; }
+.f-cta{ color: #fff; overflow: hidden; }
+.f-cta .name{ position: relative; float: left; padding-right: 10px; margin-right: 15px; border-right: 2px solid #c1c8cb; font-size: 18px; line-height: 22px;  }
+.f-cta .name:before{ content: ""; position: absolute; top: 0; bottom: 0; right: -6px; width: 4px; background: url('../images/ix_aw.png') no-repeat right center; }
+.f-cta .b{ float: left; }
+.f-cta a{ display: block; }
+.f-cop a,
+.f-cop span{ display: inline-block; vertical-align: bottom; }
+.f-cop span{ position: relative; padding-left: 30px; }
+.f-cop span:before{ content: ""; position: absolute; left: 0; top: 1px; width: 20px; height: 20px; background: url('../images/aicos.png') no-repeat -119px -100px; }
+.f-cop a{ margin-left: 25px; }
+.f-cop{ text-align: right; }
+.footer .f-cop{ float: right; }
+.footer .f-cta{ float: left; margin-left: 35px; }
+.footer .flinkmore{ float: left; margin-top: 1px; }
 
+.menuBox a{ line-height: 1.4; color: #333; }
+.mlangs{ padding: 40px 15px 25px 65px; margin-top: 80px; border-bottom: 1px solid #bdbdc0; }
+.mlangs a{ font-size: 18px; }
+
+.navMobile a{ display: block; padding-left: 65px; padding-right: 15px; }
+.navMobile dd > p > a{ padding-top: 15px; padding-bottom: 15px; font-size: 18px;  }
+.mtnav a{ padding-top: 12px; padding-bottom: 12px; }
+.mtnav{ background: #c31e15; }
 
 
