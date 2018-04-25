@@ -55,6 +55,17 @@
 .ai-nav dd:hover:before{ transform: none; opacity: 1; visibility: visible; }
 .ai-nav dd:hover .ico{ background-position: center bottom; }
 .ia-more.ab-more a:hover{ border-color: #df2128; background-color: #df2128; color: #fff; }
+.leader-list .ma:hover{ box-shadow: 0 0 15px rgba(0, 0, 0, .2); }
+.his-more p:hover{ background: #df2128; border-color: #df2128; color: #fff; }
+.ab-vi a:hover{ color: #df2128; }
+.see-more a:hover{ background: #999; }
+.see-btn a:hover{ color: #999; }
+.tk-btn a:hover{ border-color: #df2128; color: #df2128; }
+.ly-close:hover .aico{ transform: rotate(180deg); }
+.station-list .video-box:hover{ background: #df2128; }
+.station-list .video-box:hover .txts{ border-color: #df2128; color: #fff; }
+.station-list .video-box:hover .picbox:after{ border-color: #df2128; } 
+.station-more a:hover{ background: #df2128; }
 
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */

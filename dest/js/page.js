@@ -191,6 +191,21 @@ $(function () {
         });
         $('.vwrap').fadeIn();
     });
+    $(document).on(_click,'.ly-box',function(e){
+		if ($(e.target).hasClass('ly-box')) {
+			$('.ly-box').remove();
+			$('html').removeClass('open');
+		}
+	});
+	$(document).on(_click,'.ly-close',function(){
+		$('.ly-box').remove();
+		$('html').removeClass('open');
+	});
+	$('.ly-btn').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		getLayerAjax($this, $this.attr('href'));
+	});
 });
 $(document).on('click','.overlayClose',function(){
  	$('.imgShowBox').removeClass('img-show');
@@ -283,3 +298,51 @@ function setImgMax(img, imgW, imgH, tW, tH) {
         img.css({ height: imgHeight, width: tWidth, left: 0, top: -(imgHeight - tHeight) / 2 });
     };
 };
+function getLayerHeight(item) {
+    var h = item.height();
+    if(h<w_height){
+        var c = w_height - h;
+        item.css({ marginTop: c/2 });
+    }else{
+        item.attr({ style: '' });
+    }
+};
+
+function imgLoad(item) {
+    var maxNum = $('.ly-main img').size();
+    var curNum = 0;
+    $('.ly-main img').each(function () {
+        $(this).load(function () {
+            curNum++;
+            if (curNum == maxNum) {
+                getLayerHeight($('.ly-main'));
+            }
+        });
+    });
+};
+function changeLayerPosition(){
+    getLayerHeight($('.ly-main'));
+    imgLoad($('.ly-main img'));
+};
+function getLayerAjax(item,address){
+	$.ajax({
+		url: address,
+		dataType: "html",
+		success: function (data) {
+			if (data == "" || data == null) {
+				return;
+			} else {
+				$('.footer').after(data);
+				changeLayerPosition();
+				setTimeout(function(){
+					$('html').addClass('open');
+					$('.ly-box').addClass('show');
+				},300);
+			}
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown) {
+			$('.ly-box').remove();
+		}
+	})
+};
+
