@@ -250,10 +250,10 @@ function openshowImg(num,maxnum) {
 }; 
 function ShowMap(zuobiao, showmapInfo, zoom) {
     var arrzuobiao = zuobiao.split(',');
-     var map = new BMap.Map("map");
+    var map = new BMap.Map("map");
     var point = new BMap.Point(arrzuobiao[0], arrzuobiao[1]);
     var marker = new BMap.Marker(point, {
-        icon: new BMap.Icon("images/mapi.png", new BMap.Size(74, 74))
+        icon: new BMap.Icon("images/mapi.png", new BMap.Size(105, 105))
     })
     map.addOverlay(marker);
 	//marker.setAnimation(BMAP_ANIMATION_BOUNCE);
@@ -266,6 +266,7 @@ function ShowMap(zuobiao, showmapInfo, zoom) {
     marker.addEventListener("click", function () {
         map.openInfoWindow(infoWindow,point);
     });
+    // map.setMapStyle({style:'grayscale'});
 };
 var objplay;
 var Video = {
