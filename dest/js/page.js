@@ -175,6 +175,13 @@ $(function () {
 			setScroll("#" + hash);
 		}
 	};
+	$('.pnav .cur').bind(_click, function(e) {
+		var hash = $(this).attr('href').split("#")[1];
+        if (hash) {
+        	e.preventDefault();
+            jQuery("html,body").animate({ scrollTop: jQuery("#"+hash).offset().top-$mtoph},800);
+        }
+	});
 	$('.vwrap .close,.vwrap .videobtg').bind(_click,function(){
         objplay.stop(); 
         $('.vwrap').hide();
@@ -201,10 +208,24 @@ $(function () {
 		$('.ly-box').remove();
 		$('html').removeClass('open');
 	});
+	$(document).on(_click,'.pt-back .back',function(){
+		$('.ly-box').remove();
+		$('html').removeClass('open');
+	});
 	$('.ly-btn').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
 		getLayerAjax($this, $this.attr('href'));
+	});
+	$(document).on(_click,'.pt-back .arrow',function(e){
+		e.preventDefault();
+		var $this = $(this),
+			url = $this.attr('href');
+		if(url!=""){
+			getLayerAjax($this, url);
+		}else{
+			alert("没有了...o(╥﹏╥)o")
+		}
 	});
 });
 $(document).on('click','.overlayClose',function(){
@@ -333,12 +354,19 @@ function getLayerAjax(item,address){
 			if (data == "" || data == null) {
 				return;
 			} else {
-				$('.footer').after(data);
-				changeLayerPosition();
-				setTimeout(function(){
-					$('html').addClass('open');
+				if($('.ly-box').size()!=0){ 
+					$('.ly-box').remove();
+					$('.footer').after(data);
 					$('.ly-box').addClass('show');
-				},300);
+					$('html').addClass('open');
+				}else{
+					$('.footer').after(data);
+					changeLayerPosition();
+					setTimeout(function(){
+						$('html').addClass('open');
+						$('.ly-box').addClass('show');
+					},300);
+				}
 			}
 		},
 		error: function (XMLHttpRequest, textStatus, errorThrown) {

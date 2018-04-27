@@ -1,6 +1,8 @@
 @media screen and (min-width:1153px){
 /* animation */
 .scapic:hover img{ transform:scale(1.1); -webkit-transform:scale(1.1); }
+.scale-img img{ transform: scale(1.1); transition: 5s; }
+.active .scale-img img{ transform: none; }
 .transY{ transform: translateY(60px); opacity: 0; visibility: hidden; }
 .transYF{ transform: translateY(-60px); opacity: 0; visibility: hidden; }
 .transX{ transform: translateX(60px); opacity: 0; visibility: hidden; }
@@ -98,6 +100,25 @@
 .cr-list li + li:hover .t{ background: #f1d8b7; color: #333; }
 .pager a:hover{ background: #df2128; color: #fff; }
 .jb4 .cr-list li + li:hover .t{ background: #f5e2e2; color: #df2128; }
+.pro-nav a:hover{ background: #fff; }
+.pnav.pro-pnav a:hover{ background: #fff; color: #df2128; }
+.pii-arrow .slick-arrow:hover{ background-color: #df2128; }
+.ph-list .item a:hover .pic{ background: #f5f5f5; }
+.ph-list .item a:hover .txts:before{ width: 100%; right: 0; }
+.ph-list .item a:hover{ color: #df2128; }
+.pro-map-img:hover{ transform: translateY(-10px) scale(0.99); }
+.phx-nav a:hover{ background: #df2128; color: #fff; }
+.pmx-nav a:hover .pm-ti .ti,
+.pmx-nav a:hover .pm-ti{ color: #df2128; }
+.pro-intro .see-more .link:hover{ background: #999; border-color: #999; color: #fff; }
+.oi-list .item a:hover{ background: #df2128; color: #fff; }
+.oc-nav a:hover:after,
+.oc-nav a:hover:before{ transform: none; opacity: 1; visibility: visible; }
+.oc-nav a:hover{ color: #fff; }
+.oc-nav a:hover .ico{ background-position: center bottom; }
+.oc-list.jb-list a:hover .jb-ti{ color: #df2128; }
+.oc-list.jb-list a:hover .oc-more span{ background-color: #df2128; color: #fff; border-color: #df2128; } 
+.ix-ab a:hover .txts{ background: #df2128; }
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */
 @media screen and (max-width:1600px){} /* 1600 */
