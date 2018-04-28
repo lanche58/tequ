@@ -596,7 +596,7 @@ a:hover {
 .ix-news .item{ float: left; width: 33.33%; }
 .ix-news .pa{ padding: 0 30px; border-right: 1px solid #ccc; }
 .ix-news .item:nth-child(3n) .pa{ border: none; }
-.video-box{ position: relative; cursor: pointer; }
+.video-box{ position: relative; }
 .video-box .bico{ position: absolute; top: 50%; left: 50%; margin-top: -27px; margin-left: -27px; width: 53px; height: 53px; background-position: -92px 0px; transition: 400ms; }
 .in-img{ display: block; position: relative; color: #fff; }
 .in-img .txts{ position: absolute; left: 0; right: 0; bottom: 0; padding: 13px 25px; background: url('../images/black.png'); background: rgba(0, 0, 0, .6); }
@@ -897,7 +897,8 @@ html.open{ overflow: hidden; }
 .nd-back a{ display: block; padding: 13px 10px 13px 30px; color: #666; line-height: 24px; }
 .nd-back a + a{ border-top: 1px solid #ccc; }
 .nd-l .nd-back{ margin-top: 90px; }
-.nd-fix{ padding: 100px 0 0 80px; }
+.nd-fix{ transition: transform 600ms, opacity 600ms, visibility 600ms; }
+.nd-fix .pa{ padding: 100px 0 0 80px; }
 .nd-r{ margin-left: 400px; padding: 100px 80px 100px 0; }
 .share{ letter-spacing: -6px; line-height: 24px; }
 .share span,
@@ -908,7 +909,9 @@ html.open{ overflow: hidden; }
 .nd-r .ti{ font-size: 24px; color: #333; }
 .nd-r .share{ margin-top: 15px; }
 .nd-r .t{ border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 35px; }
-.nd-fix.act{ position: absolute; left: 0; top: 0; }
+.nd-fix.act{ position: fixed; top: 80px; left: 50%; margin-left: -600px; /* width: 1200px; */ }
+.nd-fix.hide{ transform: translateY(20px); opacity: 0; visibility: hidden; }
+
 .nw3{ background: #f5f5f5; padding: 60px 0 65px 0; }
 .snw-video{ display: table; width: 100%; }
 .snw-video dd{ display: table-cell; vertical-align: top; width: 65.83%; }
@@ -1069,6 +1072,7 @@ html.open{ overflow: hidden; }
 .pro-nav a.act{ background: #fff; }
 .pro-nav a.act .bico{ transform: translate(0); opacity: 1; visibility: visible; } 
 .pro-banner{ position: relative; overflow: hidden; }
+.video-btn{ cursor: pointer; }
 .pi-img-list .video-btn .pic:after,
 .pro-banner:after{ content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: url('../images/black.png'); background: rgba(0, 0, 0, .2); }
 .pro-banner .txts{ position: absolute; z-index: 9; top: 32%; left: 50%; margin-left: -600px; width: 1200px; color: #fff; }
@@ -1233,9 +1237,48 @@ html.open{ overflow: hidden; }
 .pro-tour-box .ly-close{ right: auto; left: -46px; }
 .pro-nw-list.cog-nw-list .txts{ height: 54px; }
 .pro-nw-list.cog-nw-list .nowti{ line-height: 24px; margin-top: 15px; }
-
+.como-list a{ color: #fff; }
+.como-list li{ float: left; width: 33.33%; }
+.como-list .ma{ margin-left: 50px; background: #fff; transition: 400ms; }
+.como-list{ margin-left: -50px; }
+.como-list .t{ height: 94px; padding: 0 45px; overflow: hidden; }
+.como-list .ti{ margin-top: 32px; font-size: 18px; color: #df2128; transition: 400ms; }
+.como-list .ti i{ font-size: 22px; margin-right: 15px; }
+.como-list .picbox{ position: relative; overflow: hidden; }
+.como-list .txts{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; padding: 0 45px; background: #fff; transform: translateY(100%); opacity: 0; visibility: hidden; transition: 600ms; }
+.como-list .tx{ margin-top: 40px; line-height: 28px; }
+.como-list .line{ position: absolute; left: 45px; right: 45px; height: 1px; background: #df2128; bottom: 50px; }
+.como-list .line:before{ content: ""; position: absolute; right: 0; bottom: -18px; width: 13px; height: 7px; background: url('../images/bicos.png') no-repeat -108px -53px; }
+.como-list .ma:hover{ background: #df2128; }
+.como-list .ma:hover .ti{ color: #fff; }
+.como-list .ma:hover .txts{ transform: none; opacity: 1; visibility: visible; }
+.pro11 .como-list{ margin-top: 64px; } 
+.pro11{ padding: 90px 0 125px 0; }
+.gp-list li{ float: left; width: 20%; margin-bottom: 15px; }
+.gp-list .ma{ margin-left: 15px; transition: 400ms; }
+.gp-list{ margin-left: -15px; }
+.pro12 .gp-list{ margin-top: 35px; }
+.pro12{ padding: 90px 0 100px 0; }
+.cog3 .clearfix .ia-more{ float: right; }
+.cog3 .clearfix .ix-title{ float: left; }
+.cog3{ padding: 100px 0 125px 0; }
+.cn-list .news-list{ border: none; }
+.cn-list .news-list a{ margin: 0 }
+.cn-list .news-list li{ float: none; width: 100%; }
+.cn-list .item{ float: left; width: 33.33%; }
+.cn-list .news-list{ margin-left: 55px; }
+.cn-list{ margin-left: -55px; }
+.cn-list .slick-prev { left: -35px; }
+.cn-list .slick-arrow{ margin-top: -23px; }
+.cog3 .cn-list{ margin-top: 40px; }
+.cog4 .clearfix .ix-title{ float: left; }
+.cog4 .cs-list{ float: right; }
+.cs-list{ width: 75.83%; }
+.cs-list a{ color: #666; }
+.cs-list .nowti{ font-size: 16px; padding: 0 15px; border-bottom: 1px solid #df2128; line-height: 64px; }
+.cs-list .slick-arrow{ margin-top: -55px; }
 .his-dot{ display: block; position: relative; margin: 0 auto; width: 18px; height: 18px; border-radius: 100%; border: 6px solid #fff; background: #df2128; box-shadow: 0 0 8px rgba(0, 0, 0, .3); }
-.his-list{ position: relative; padding: 70px 0 0; overflow: hidden; }
+.his-list{ position: relative; padding: 70px 0 50px; overflow: hidden; }
 .his-list li{ float: right; width: 50%; }
 .his-a{ position: relative; padding: 35px 50px 45px 40px; background: #fff; }
 .his-list .item1 .his-a{ margin-left: 50px; } 
@@ -1250,9 +1293,25 @@ html.open{ overflow: hidden; }
 .his-a .b{ margin-top: 20px; }
 .his-a:hover .his-more a{ width: 100%; opacity: 1; visibility: visible; }
 .his-list:before{ content: ""; position: absolute; left: 50%; top: 0; width: 1px; height: 100%; background: #999; }
-.his-a:before{ content: ""; position: absolute; top: 50px; width: 10px; height: 10px; border-radius: 100%; background: #df2128; }
-.his-list .item1 .his-a:before{ left: -54px; }
-.his-list .item2 .his-a:before{ right: -56px; }
+.his-a:after{ content: ""; position: absolute; top: 50px; width: 11px; height: 11px; border-radius: 100%; background: #df2128; }
+.his-list .item1 .his-a:after{ left: -55px; }
+.his-list .item2 .his-a:after{ right: -56px; }
 .his-a + .his-a{ margin-top: 100px; }
 .his-list .item2{ padding-top: 230px; }
-.his-box{ padding: 0 80px; }
+.his-box{ padding: 0 72px; }
+.his-a:before{ content: ""; position: absolute; top: 55px; width: 40px; height: 1px; background: #999; }
+.his-list .item1 .his-a:before{ left: -50px; }
+.his-list .item2 .his-a:before{ right: -51px; }
+.ab3 .his-box{ margin-top: 40px; }
+.ab3{ padding-top: 110px; }
+.his-control-box{ color: #fff; background: #333; }
+.his-control{ margin: 0 72px; position: relative; overflow: hidden; }
+.his-control:before{ content: ""; position: absolute; top: 18px; left: 87px; right: 87px; height: 1px; background: #fff; }
+.hc-move{ overflow: hidden; }
+.hc-move .item{ float: left; position: relative; width: 174px; height: 60px; overflow: hidden; color: #fff; }
+.hc-move .date{ margin-top: 33px; line-height: 1; }
+.hc-move .dot{ display: block; position: absolute; left: 50%; margin-left: -2px; top: 17px; border-radius: 100%; background: #fff; width: 3px; height: 3px; }
+.hc-move .dot:before{ content: ""; position: absolute; top: -7px; bottom: -7px; left: -7px; right: -7px; border-radius: 100%; border: 1px solid #fff; }
+.hc-arrow{ position: absolute; top: 0; bottom: 0; width: 20px; background: #000; }
+.hc-prev{ left: 0; }
+.hc-next{ right: 0; }

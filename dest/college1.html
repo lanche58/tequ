@@ -152,9 +152,9 @@
 <div class="pnav" id="cog">
     <p class="mcv">学院介绍<span class="caret"></span></p>
     <ul class="fib">
-        <li class="ib"><a href="college1.html" class="act">学院介绍</a></li>
-        <li class="ib"><a href="college2.html">学院动态</a></li>
-        <li class="ib"><a href="college3.html">学院风采</a></li>
+        <li class="ib"><a href="college1.html?#cog" class="act">学院介绍</a></li>
+        <li class="ib"><a href="college2.html?#cog">学院动态</a></li>
+        <li class="ib"><a href="college3.html?#cog">学院风采</a></li>
         <li class="ib"><a href="#">在线教学</a></li>
     </ul>
 </div>
@@ -163,10 +163,12 @@
         <div class="nd-box pw">
             <div class="nd-l">
                 <div class="nd-fix">
-                    <div class="ix-title">
-                        <p class="ch">学院介绍</p>
-                        <p class="en">College Introduction</p>
-                        <span class="it-aw aico"></span>
+                    <div class="pa">
+                        <div class="ix-title">
+                            <p class="ch">学院介绍</p>
+                            <p class="en">College Introduction</p>
+                            <span class="it-aw aico"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -300,10 +302,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();
@@ -311,6 +314,6 @@
             turnNewsFix();
         });
     })
-</script>
+</script>?#cog
 </body>
 </html>

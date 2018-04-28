@@ -190,10 +190,12 @@
         <div class="nd-box pw">
             <div class="nd-l">
                 <div class="nd-fix">
-                    <div class="ix-title">
-                        <p class="ch">事业部简介</p>
-                        <p class="en">Department Introduction</p>
-                        <span class="it-aw aico"></span>
+                    <div class="pa">
+                        <div class="ix-title">
+                            <p class="ch">事业部简介</p>
+                            <p class="en">Department Introduction</p>
+                            <span class="it-aw aico"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -320,10 +322,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();

@@ -179,12 +179,12 @@
     </div>
 </div>
 <div class="pnav pro-pnav" id="pro">
-    <p class="mcv">事业部简介<span class="caret"></span></p>
+    <p class="mcv">产品模式<span class="caret"></span></p>
     <ul class="fib pw">
         <li class="ib"><a href="pro-a.html?#pro">事业部简介</a></li>
         <li class="ib"><a href="pro-b.html?#pro">产品之家</a></li>
         <li class="ib"><a href="pro-c.html?#pro" class="act">产品模式</a></li>
-        <li class="ib"><a href="pro.html?#pro4" class="cur">营销网络</a></li>
+        <li class="ib"><a href="pro.html?#pro4">营销网络</a></li>
     </ul>
 </div>
 <div class="container">
@@ -338,10 +338,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();

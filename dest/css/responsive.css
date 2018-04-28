@@ -119,6 +119,10 @@
 .oc-list.jb-list a:hover .jb-ti{ color: #df2128; }
 .oc-list.jb-list a:hover .oc-more span{ background-color: #df2128; color: #fff; border-color: #df2128; } 
 .ix-ab a:hover .txts{ background: #df2128; }
+.gp-list .ma:hover{ box-shadow: 0 0 8px rgba(0, 0, 0, .2); }
+.ph-nav a:hover{ color: #df2128; }
+.cs-list a:hover .nowti{ color: #df2128; }
+.cog4{ padding: 90px 0 110px 0; }
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */
 @media screen and (max-width:1600px){} /* 1600 */

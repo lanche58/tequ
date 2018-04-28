@@ -182,7 +182,7 @@
     <p class="mcv">事业部简介<span class="caret"></span></p>
     <ul class="fib pw">
         <li class="ib"><a href="pro2-a.html?#pro" class="act">事业部简介</a></li>
-        <li class="ib"><a href="pro2.html?#pro10" class="cur">项目介绍</a></li>
+        <li class="ib"><a href="pro2.html?#pro10">项目介绍</a></li>
     </ul>
 </div>
 <div class="container">
@@ -190,10 +190,12 @@
         <div class="nd-box pw">
             <div class="nd-l">
                 <div class="nd-fix">
-                    <div class="ix-title">
-                        <p class="ch">事业部简介</p>
-                        <p class="en">Department Introduction</p>
-                        <span class="it-aw aico"></span>
+                    <div class="pa">
+                        <div class="ix-title">
+                            <p class="ch">事业部简介</p>
+                            <p class="en">Department Introduction</p>
+                            <span class="it-aw aico"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,10 +316,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();

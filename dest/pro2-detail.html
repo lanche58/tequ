@@ -179,7 +179,7 @@
     </div>
 </div>
 <div class="pnav pro-pnav" id="pro">
-    <p class="mcv">事业部简介<span class="caret"></span></p>
+    <p class="mcv">项目介绍<span class="caret"></span></p>
     <ul class="fib pw">
         <li class="ib"><a href="pro2-a.html?#pro">事业部简介</a></li>
         <li class="ib"><a href="pro2.html?#pro10" class="act">项目介绍</a></li>
@@ -190,15 +190,17 @@
         <div class="nd-box pw">
             <div class="nd-l">
                 <div class="nd-fix">
-                    <div class="ix-title">
-                        <p class="ch">项目介绍</p>
-                        <p class="en">Project Introduction</p>
-                        <span class="it-aw aico"></span>
-                    </div>
-                    <div class="nd-back">
-                        <a href="#">< 上一篇</a>
-                        <a href="news.html">= 返回列表</a>
-                        <a href="#">> 下一篇</a>
+                    <div class="pa">
+                        <div class="ix-title">
+                            <p class="ch">项目介绍</p>
+                            <p class="en">Project Introduction</p>
+                            <span class="it-aw aico"></span>
+                        </div>
+                        <div class="nd-back">
+                            <a href="#">< 上一篇</a>
+                            <a href="pro2.html?#pro10">= 返回列表</a>
+                            <a href="#">> 下一篇</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -318,10 +320,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();

@@ -150,15 +150,17 @@
         <div class="nd-box pw">
             <div class="nd-l">
                 <div class="nd-fix">
-                    <div class="ix-title">
-                        <p class="ch">学院动态</p>
-                        <p class="en">College News</p>
-                        <span class="it-aw aico"></span>
-                    </div>
-                    <div class="nd-back">
-                        <a href="#">< 上一篇</a>
-                        <a href="college.html">= 返回列表</a>
-                        <a href="#">> 下一篇</a>
+                    <div class="pa">
+                        <div class="ix-title">
+                            <p class="ch">学院动态</p>
+                            <p class="en">College News</p>
+                            <span class="it-aw aico"></span>
+                        </div>
+                        <div class="nd-back">
+                            <a href="#">< 上一篇</a>
+                            <a href="college2.html?#cog">= 返回列表</a>
+                            <a href="#">> 下一篇</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,10 +290,11 @@
             var a = $('.nd-box').offset().top - $mtoph;
             var f = $('.footer').offset().top - w_height;
             if(st>a&&st<f){
-                $('.nd-fix').addClass('act');
-                $('.nd-fix').css({ top: st-a });
+                $('.nd-fix').addClass('act').removeClass('hide');
             }else if(st<a){
                 $('.nd-fix').removeClass('act');
+            }else if(st>f){
+                $('.nd-fix').addClass('hide');
             }
         };
         turnNewsFix();
