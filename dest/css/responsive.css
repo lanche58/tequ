@@ -123,6 +123,9 @@
 .ph-nav a:hover{ color: #df2128; }
 .cs-list a:hover .nowti{ color: #df2128; }
 .cog4{ padding: 90px 0 110px 0; }
+.hc-prev:not(.no):hover{ background-position: right top; } 
+.hc-next:not(.no):hover{ background-position: left bottom; } 
+.hc-move .item:hover .dot:before{ transform: none; opacity: 1; visibility: visible; } 
 } /* 1153 */
 @media screen and (max-width:1800px){} /* 1800 */
 @media screen and (max-width:1600px){} /* 1600 */
