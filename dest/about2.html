@@ -177,7 +177,7 @@
                         <div class="his-a">
                             <div class="t clearfix">
                                 <p class="date ff-2">2005</p>
-                                <div class="his-more"><a href="#"><i class="line"></i><p>查看更多</p></a></div>
+                                <div class="his-more"><a href="about-ajax2.html" class="ly-btn"><i class="line"></i><p>查看更多</p></a></div>
                             </div>
                             <div class="b clearfix">
                                 <p class="month">6月</p>
@@ -189,7 +189,7 @@
                         <div class="his-a">
                             <div class="t clearfix">
                                 <p class="date ff-2">2007</p>
-                                <div class="his-more"><a href="#"><i class="line"></i><p>查看更多</p></a></div>
+                                <div class="his-more"><a href="about-ajax2.html" class="ly-btn"><i class="line"></i><p>查看更多</p></a></div>
                             </div>
                             <div class="b clearfix">
                                 <p class="month">6月</p>
@@ -203,7 +203,7 @@
                         <div class="his-a">
                             <div class="t clearfix">
                                 <p class="date ff-2">2009</p>
-                                <div class="his-more"><a href="#"><i class="line"></i><p>查看更多</p></a></div>
+                                <div class="his-more"><a href="about-ajax2.html" class="ly-btn"><i class="line"></i><p>查看更多</p></a></div>
                             </div>
                             <div class="b clearfix">
                                 <p class="month">10月</p>
@@ -217,7 +217,7 @@
                         <div class="his-a">
                             <div class="t clearfix">
                                 <p class="date ff-2">2006</p>
-                                <div class="his-more"><a href="#"><i class="line"></i><p>查看更多</p></a></div>
+                                <div class="his-more"><a href="about-ajax2.html" class="ly-btn"><i class="line"></i><p>查看更多</p></a></div>
                             </div>
                             <div class="b clearfix">
                                 <p class="month">5月</p>
@@ -231,7 +231,7 @@
                         <div class="his-a">
                             <div class="t clearfix">
                                 <p class="date ff-2">2008</p>
-                                <div class="his-more"><a href="#"><i class="line"></i><p>查看更多</p></a></div>
+                                <div class="his-more"><a href="about-ajax2.html" class="ly-btn"><i class="line"></i><p>查看更多</p></a></div>
                             </div>
                             <div class="b clearfix">
                                 <p class="month">5月</p>
@@ -245,23 +245,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="his-control-box">
-            <div class="pw">
-                <div class="his-control">
-                    <div class="hc-move">
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2005</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2006</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2007</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2008</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2009</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2010</p></a>
-                        <a href="#" class="item"><span class="dot"></span><p class="ff-1 tac date">2011</p></a>
-                    </div>
-                    <div class="hc-arrow hc-prev"></div>
-                    <div class="hc-arrow hc-next"></div>
-                </div>
-            </div>
+            <!-- his-box -->
         </div>
     </div>
     <!-- ab3 -->
@@ -360,44 +344,5 @@
 </div>
 <script src="js/plugin.js"></script>
 <script src="js/page.js"></script>
-<script>
-    var cw = 0, //单个长度
-        an = 0, //总个数
-        cn = 6, // 显示个数
-        mn = 1, //移动次数
-        aw = 0, //移动块总长度 
-        sw = 0; //可视长度
-
-    function hisBox(){
-        cw = $('.hc-move .item').width();
-        an = $('.hc-move .item').size();
-        aw = cw*an; //总长度
-        sw = cw*cn; //可视长度
-        mn = Math.ceil(aw/sw);
-        console.log(mn);
-        $('.hc-move').css({ width: aw});
-
-    };
-    hisBox();
-    $(function(){
-        $('.hc-next').bind(_click, function() {
-            mn++;
-            var s = aw - mn*sw;
-            if(s>=0){
-                $('.hc-move').stop().animate({ marginLeft: -sw}, 1000);
-            }else{
-                $('.hc-move').stop().animate({ marginLeft: s}, 1000);
-            }
-            // var aw = $('.hc-move').width();
-            // var m = aw/w*6;
-
-
-
-        });
-
-
-
-    })
-</script>
 </body>
 </html>

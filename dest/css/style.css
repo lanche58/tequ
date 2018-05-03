@@ -1290,7 +1290,7 @@ html.open{ overflow: hidden; }
 .his-more p{ position: absolute; top: 0; right: 0; width: 82px; border: 1px solid #ccc; line-height: 26px; text-align: center; font-size: 12px; color: #666; transition: 300ms; }
 .his-a .month{ float: left; width: 60px; }
 .his-a .freeTx{ margin-left: 60px; }
-.his-a .b{ margin-top: 20px; }
+.his-a .b{ margin-top: 20px; min-height: 240px; }
 .his-a:hover .his-more a{ width: 100%; opacity: 1; visibility: visible; }
 .his-list:before{ content: ""; position: absolute; left: 50%; top: 0; width: 1px; height: 100%; background: #999; }
 .his-a:after{ content: ""; position: absolute; top: 50px; width: 11px; height: 11px; border-radius: 100%; background: #df2128; }
@@ -1305,13 +1305,20 @@ html.open{ overflow: hidden; }
 .ab3 .his-box{ margin-top: 40px; }
 .ab3{ padding-top: 110px; }
 .his-control-box{ color: #fff; background: #333; }
-.his-control{ margin: 0 72px; position: relative; overflow: hidden; }
-.his-control:before{ content: ""; position: absolute; top: 18px; left: 87px; right: 87px; height: 1px; background: #fff; }
+.his-control-box.fix{ position: fixed; left: 0; right: 0; bottom: 0; z-index: 199; }
+.his-control{ margin: 0 72px; height: 60px; position: relative; overflow: hidden; }
+.his-control:before{ content: ""; position: absolute; top: 18px; left: 88px; right: 88px; height: 1px; background: #fff; }
 .hc-move{ overflow: hidden; }
-.hc-move .item{ float: left; position: relative; width: 174px; height: 60px; overflow: hidden; color: #fff; }
+.hc-move .item{ float: left; position: relative; width: 176px; height: 60px; overflow: hidden; color: #fff; }
 .hc-move .date{ margin-top: 33px; line-height: 1; }
 .hc-move .dot{ display: block; position: absolute; left: 50%; margin-left: -2px; top: 17px; border-radius: 100%; background: #fff; width: 3px; height: 3px; }
-.hc-move .dot:before{ content: ""; position: absolute; top: -7px; bottom: -7px; left: -7px; right: -7px; border-radius: 100%; border: 1px solid #fff; }
-.hc-arrow{ position: absolute; top: 0; bottom: 0; width: 20px; background: #000; }
+.hc-move .dot:before{ content: ""; position: absolute; top: -7px; bottom: -7px; left: -7px; right: -7px; border-radius: 100%; border: 1px solid #fff; transform: scale(0); opacity: 0; visibility: hidden; transition: 400ms; }
+.hc-arrow{ position: absolute; z-index: 29; top: 50%; margin-top: -10px; width: 21px; height: 21px; background: url('../images/ab_aw2.png') no-repeat; cursor: pointer; }
 .hc-prev{ left: 0; }
-.hc-next{ right: 0; }
+.hc-next{ right: 0; background-position: right bottom; }
+.hc-arrow.no{ opacity: 0.5; cursor: default; }
+.hc-move .item.act .dot:before{ transform: none; opacity: 1; visibility: visible; } 
+.ly-his{ overflow: hidden; }
+.ly-his dt{ float: left; width: 90px; color: #df2128; }
+.ly-his dd{ margin-left: 90px; }
+.ly-his + .ly-his{ margin-top: 35px; }
