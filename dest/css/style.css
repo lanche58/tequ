@@ -233,7 +233,7 @@ a:hover {
 	position:fixed;
 	width:320px;
 	top:0;
-	right:0;
+	right:-320px;
 	height:100%;
 	background:#f5f5f5;
 	z-index:1004;
@@ -242,6 +242,16 @@ a:hover {
 	-webkit-overflow-scrolling: touch;
 	display:none;
 	}
+.menuBlack{
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1003;
+	background: rgba(0, 0, 0, .5);
+}
 .logo{ 
 	display:block; 
 	}
@@ -256,6 +266,8 @@ a:hover {
 	position:relative; 
 	background-repeat: no-repeat;
 	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 	}
 .pic > img{ 
 	display:block; 
@@ -352,6 +364,7 @@ a:hover {
 	text-align: center; 
 	cursor: pointer; 
 	display: none; 
+	font-size: 15px;
 	} 
 .caret { 
 	display: inline-block; 
@@ -393,8 +406,8 @@ a:hover {
 /* menuBtn */
 .mtrans, .mtrans:hover { -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s; transition:all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s; -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s; }
 .mtrans-fast, .mtrans-fast:hover { -webkit-transition: all 200ms ease-in-out; transition: all 200ms ease-in-out; -ms-transition: all 200ms ease-in-out; }
-.menu-handler { display: none; background: #e5e5e5; overflow: hidden; width: 60px; height: 60px; cursor: pointer; position:absolute; right:0; top: 0px; transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); -moz-transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); z-index:1012; }
-.menu-handler .burger { width: 32px; height: 4px; background: #201b18; display: block; position: absolute; z-index: 5; top: 18px; left: 50%; margin: 0px 0px 0px -16px; transform-origin: center; -webkit-transform-origin: center; -moz-transform-origin: center; -o-transform-origin: center; -ms-transform-origin: center; }
+.menu-handler { display: none; background: none; overflow: hidden; width: 60px; height: 60px; cursor: pointer; position:absolute; right:0; top: 0px; transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); -webkit-transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); -moz-transition: all 0.3s cubic-bezier(0.445, 0.145, 0.355, 1); z-index:1012; }
+.menu-handler .burger { width: 32px; height: 4px; background: #707070; display: block; position: absolute; z-index: 5; top: 18px; left: 50%; margin: 0px 0px 0px -16px; transform-origin: center; -webkit-transform-origin: center; -moz-transform-origin: center; -o-transform-origin: center; -ms-transform-origin: center; }
 .menu-handler .burger-2 { top: 28px; }
 .menu-handler .burger-3 { top: 38px; }
 .menu-handler.active .burger-1 { top: 30px; -webkit-transform: rotate(225deg); transform: rotate(225deg); }
@@ -703,11 +716,9 @@ a:hover {
 .pnav{ background: #fff; border-bottom: 1px solid #ccc; }
 .pnav ul{ text-align: center; }
 .pnav li:first-child{ border-left: 1px solid #ccc; }
-.pnav li{ width: 154px; border-right: 1px solid #ccc; width:  }
+.pnav li{ width: 154px; border-right: 1px solid #ccc; }
 .pnav a{ display: block; position: relative; padding: 20px 0; line-height: 24px; font-size: 16px; color: #666; text-align: center; }
 .pnav a:before{ content: ""; position: absolute; left: auto; right: 0; bottom: 0; width: 0; height: 4px; background: #df2128; transition: 400ms; }
-.pnav a.act:before{ width: 100%; left: 0; right: auto; }
-.pnav a.act{ color: #df2128; }
 .ab-intro-list li:nth-child(2n){ background: #fff; }
 .ab-intro-list .pa{ position: relative; min-height: 260px; margin-left: 27.5%; padding: 100px 0; }
 .ab-intro-list .pa:before{ content: ""; position: absolute; top: 0; bottom: 0; left: -50px; width: 1px; background: #ccc; }
@@ -829,7 +840,7 @@ a:hover {
 .ab7{ padding: 80px 0 90px 0; }
 html.open{ overflow: hidden; }
 .ly-box{ position: fixed; top: 0; left: 0; right: 0; z-index: 1999; height: 100%; background: url('../images/black.png'); overflow: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; opacity: 0; visibility: hidden; transition: 600ms; }
-.ly-main{ width: 780px; position: relative; margin-left: auto; margin-right: auto; transform: translateX(60px); opacity: 0; visibility: hidden; transition: transform 1s, opacity 600ms, visibility 600ms; }
+.ly-main{ width: 780px; max-width: 100%; position: relative; margin-left: auto; margin-right: auto; transform: translateX(60px); opacity: 0; visibility: hidden; transition: transform 1s, opacity 600ms, visibility 600ms; }
 .ly-box.show{ opacity: 1; visibility: visible; }
 .ly-box.show .ly-main{ transform: none; opacity: 1; visibility: visible; }
 .ly-ctt{ border-top: 5px solid #df2128; padding: 35px 50px 150px 50px; background: #fff; }
@@ -861,7 +872,7 @@ html.open{ overflow: hidden; }
 .aos-tx{ float: left; width: 37%; height: 100%; background: #d7d7d7; }
 .aos-tx .aos-ti{ color: #df2128; }
 .aos-tx .freeTx{ margin-top: 45px; font-size: 18px; color: #333; line-height: 2; }
-.aos-b{ padding: 60px 0 100px 0; }
+.aos-b{ padding: 60px 5% 100px 5%; }
 .ab9{ padding: 75px 0 65px 0; }
 .news-list{ border-left: 1px solid #dadada; }
 .news-list li{ float: left; width: 33.33%; }
@@ -1064,7 +1075,7 @@ html.open{ overflow: hidden; }
 .cog2{ padding: 65px 0 60px 0; }
 .pro-nav{ background: #f5f5f5; }
 .pro-nav li{ width: 20%; }
-.pro-nav a{ display: block; height: 230px; padding: 0 15px; border-right: 1px solid #ccc; overflow: hidden; color: #333; }
+.pro-nav a{ display: block; height: 230px; padding: 0 5px; border-right: 1px solid #ccc; overflow: hidden; color: #333; }
 .pro-nav .nowti{ margin-top: 3px; font-size: 16px; }
 .pro-nav .ico{ margin-top: 65px; height: 70px; }
 .pro-nav .bico{ width: 11px; height: 6px; margin: 17px auto 0 auto; background-position: -121px -53px; transform: translateY(-10px); opacity: 0; visibility: hidden; transition: 400ms; }
@@ -1079,7 +1090,7 @@ html.open{ overflow: hidden; }
 .pro-banner .ch{ font-size: 36px; }
 .pro-banner .en{ margin-top: 5px; line-height: 1.3; }
 .pro-banner .pb-aw{ margin-top: 25px; }
-.pb-aw .aico{ background-position: -150px -60px; animation: fadeRight 1.6s infinite; }
+.pro-aw .aico{ background-position: -150px -60px; animation: fadeRight 1.6s infinite; }
 .pnav.pro-pnav{ background: #df2128; border: none; }
 .pnav.pro-pnav ul{ text-align: left; }
 .pnav.pro-pnav a{ color: #fff; }
@@ -1109,9 +1120,6 @@ html.open{ overflow: hidden; }
 .ph-arrow .slick-arrow{ position: absolute; z-index: 29; top: 50%; margin-top: -55px; width: 46px; height: 46px; border-radius: 100%; background: #fff url('../images/bicos.png') no-repeat; }
 .ph-arrow .slick-prev{ left: -85px; background-position: 0px 0px; }
 .ph-arrow .slick-next{ right: -85px; background-position: -46px -46px; }
-.ph-arrow .slick-arrow:hover{ background-color: #df2128; }
-.ph-arrow .slick-prev:hover{ background-position: -46px 0px; }
-.ph-arrow .slick-next:hover{ background-position: 0 -46px; }
 .pro2 .ph-list{ margin-top: 35px; }
 .pro2{ padding: 90px 0 110px 0; }
 .pm-ti{ color: #333; }
@@ -1249,9 +1257,6 @@ html.open{ overflow: hidden; }
 .como-list .tx{ margin-top: 40px; line-height: 28px; }
 .como-list .line{ position: absolute; left: 45px; right: 45px; height: 1px; background: #df2128; bottom: 50px; }
 .como-list .line:before{ content: ""; position: absolute; right: 0; bottom: -18px; width: 13px; height: 7px; background: url('../images/bicos.png') no-repeat -108px -53px; }
-.como-list .ma:hover{ background: #df2128; }
-.como-list .ma:hover .ti{ color: #fff; }
-.como-list .ma:hover .txts{ transform: none; opacity: 1; visibility: visible; }
 .pro11 .como-list{ margin-top: 64px; } 
 .pro11{ padding: 90px 0 125px 0; }
 .gp-list li{ float: left; width: 20%; margin-bottom: 15px; }
@@ -1290,8 +1295,7 @@ html.open{ overflow: hidden; }
 .his-more p{ position: absolute; top: 0; right: 0; width: 82px; border: 1px solid #ccc; line-height: 26px; text-align: center; font-size: 12px; color: #666; transition: 300ms; }
 .his-a .month{ float: left; width: 60px; }
 .his-a .freeTx{ margin-left: 60px; }
-.his-a .b{ margin-top: 20px; min-height: 240px; }
-.his-a:hover .his-more a{ width: 100%; opacity: 1; visibility: visible; }
+.his-a .b{ margin-top: 20px; }
 .his-list:before{ content: ""; position: absolute; left: 50%; top: 0; width: 1px; height: 100%; background: #999; }
 .his-a:after{ content: ""; position: absolute; top: 50px; width: 11px; height: 11px; border-radius: 100%; background: #df2128; }
 .his-list .item1 .his-a:after{ left: -55px; }
@@ -1322,3 +1326,6 @@ html.open{ overflow: hidden; }
 .ly-his dt{ float: left; width: 90px; color: #df2128; }
 .ly-his dd{ margin-left: 90px; }
 .ly-his + .ly-his{ margin-top: 35px; }
+.ab-intro-list .ix-title{ display: none; margin-bottom: 45px; }
+.m-ly-close{ display: none; }
+.cog-nw-list{ margin-left: -20px; }

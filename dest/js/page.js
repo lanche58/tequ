@@ -137,17 +137,29 @@ $(function () {
 		}
 	});
 	$menuBtn.bind(_click, function () {
+		var w = $menuBox.width();
         if (navItem == 0) {
-            $(this).addClass("active");
-            $menuBox.show().stop(false,false).animate({top:0});
+			$('.menuBlack').stop().fadeIn(600);
+			$(this).addClass('active');
+            $menuBox.show().stop(false,false).animate({right:0});
             navItem = 1;
         } else {
-			$(this).removeClass("active");
-            $menuBox.stop(false,false).animate({top:-100+"%"},function(){
+            $('.menuBlack').stop().fadeOut(600);
+            $(this).removeClass('active');
+            $menuBox.stop(false,false).animate({right:-w+"px"},function(){
                 $(this).hide();
             });
             navItem = 0;
-        }
+        };
+    });
+	$('.menuBlack').bind(_click, function () {
+		var w = $menuBox.width();
+		$menuBtn.removeClass('active');
+		$('.menuBlack').stop().fadeOut(600);
+		$menuBox.stop(false,false).animate({right:-w+"px"},function(){
+			$(this).hide();
+		});
+		navItem = 0;
     });
 	//weixin
 	setPopUp($('.weixin'), "官方微信");
