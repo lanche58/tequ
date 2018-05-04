@@ -605,7 +605,7 @@ a:hover {
 .ix-title .it-aw{ margin-top: 15px; }
 .it-aw{ width: 19px; height: 20px; background-position: -100px -100px; border: 2px solid #999; }
 .ix1 .ix-title{ float: left; width: 13%; }
-.ix-news{ float: right; width: 87%; }
+.ix-news-box{ float: right; width: 87%; }
 .ix-news .item{ float: left; width: 33.33%; }
 .ix-news .pa{ padding: 0 30px; border-right: 1px solid #ccc; }
 .ix-news .item:nth-child(3n) .pa{ border: none; }
@@ -760,8 +760,8 @@ a:hover {
 .ix-title-fix.act{ position: fixed; top: 80px; }
 .ix-title-fix .ch{ position: relative; height: 30px; line-height: 30px; overflow: hidden; }
 .ix-title-fix .en{ position: relative; height: 20px; line-height: 20px; overflow: hidden; }
-.ix-title-fix p span{ display: inline-block; vertical-align: bottom; position: absolute; bottom: 100%; left: 0;  }
-.ix-title-fix p span.show{ bottom: 0; transition: 400ms;  }
+.ix-title-fix p span{ display: inline-block; vertical-align: bottom; position: absolute; bottom: 100%; left: 0; opacity: 0; visibility: hidden;  }
+.ix-title-fix p span.show{ bottom: 0; transition: 400ms; opacity: 1; visibility: visible;  }
 .ix-title-fix.hide{ transform: translateY(20px); opacity: 0; visibility: hidden; }
 .fixctas{ position: fixed; top: 50%; margin-top: -76px; right: 15px; z-index: 899; width: 50px; }
 .fixctas a{ display: block; position: relative; height: 50px; color: #666; box-shadow: 0 0 5px rgba(0, 0, 0, .2); }
@@ -924,11 +924,11 @@ html.open{ overflow: hidden; }
 .nd-fix.hide{ transform: translateY(20px); opacity: 0; visibility: hidden; }
 
 .nw3{ background: #f5f5f5; padding: 60px 0 65px 0; }
-.snw-video{ display: table; width: 100%; }
-.snw-video dd{ display: table-cell; vertical-align: top; width: 65.83%; }
-.snw-video dd:first-child{ background: #fff; width: 34.17%; }
+.snw-video dd{ float: left; width: 65.83%; }
+.snw-video dd:first-child{ width: 34.17%; }
 .snw-video .video-box{ margin-left: 15px; }
-.snw-tx{ padding: 45px 50px; }
+
+.snw-tx{ padding: 45px 50px; height: 332px; background: #fff; overflow: hidden; }
 .snw-tx .tx{ margin-top: 45px; padding-top: 30px; line-height: 2; border-top: 1px solid #ccc; }
 .nw4{ padding: 70px 0 75px 0; }
 .cta1{ padding: 65px 0 80px 0; }
@@ -1015,7 +1015,7 @@ html.open{ overflow: hidden; }
 .jb2{ padding: 70px 0 90px 0; }
 .campus-tx .picbox{ position: relative; }
 .campus-more a{ background: #df2128; color: #fff; font-size: 16px; }
-.campus-tx .campus-more{ position: absolute; left: 0; right: 0; bottom: 80px; }
+.campus-tx .campus-more{ position: absolute; left: 0; right: 0; bottom: 16%; }
 .campus-tx{ background: #fff; }
 .campus-tx .freeTx{ padding: 55px 80px 70px 80px; }
 .campus-tx .ti{ margin-bottom: 30px; font-size: 24px; color: #df2128; }
@@ -1284,7 +1284,6 @@ html.open{ overflow: hidden; }
 .cs-list .slick-arrow{ margin-top: -55px; }
 .his-dot{ display: block; position: relative; margin: 0 auto; width: 18px; height: 18px; border-radius: 100%; border: 6px solid #fff; background: #df2128; box-shadow: 0 0 8px rgba(0, 0, 0, .3); }
 .his-list{ position: relative; padding: 70px 0 50px; overflow: hidden; }
-.his-list li{ float: right; width: 50%; }
 .his-a{ position: relative; padding: 35px 50px 45px 40px; background: #fff; }
 .his-list .item1 .his-a{ margin-left: 50px; } 
 .his-list .item2 .his-a{ margin-right: 50px; }
@@ -1300,9 +1299,10 @@ html.open{ overflow: hidden; }
 .his-a:after{ content: ""; position: absolute; top: 50px; width: 11px; height: 11px; border-radius: 100%; background: #df2128; }
 .his-list .item1 .his-a:after{ left: -55px; }
 .his-list .item2 .his-a:after{ right: -56px; }
-.his-a + .his-a{ margin-top: 100px; }
-.his-list .item2{ padding-top: 230px; }
+.his-list .item2{ margin-top: 180px; }
+.his-list .item1{ clear: both; }
 .his-box{ padding: 0 72px; }
+.his-list .item{ width: 50%; float: right; }
 .his-a:before{ content: ""; position: absolute; top: 55px; width: 40px; height: 1px; background: #999; }
 .his-list .item1 .his-a:before{ left: -50px; }
 .his-list .item2 .his-a:before{ right: -51px; }
@@ -1329,3 +1329,8 @@ html.open{ overflow: hidden; }
 .ab-intro-list .ix-title{ display: none; margin-bottom: 45px; }
 .m-ly-close{ display: none; }
 .cog-nw-list{ margin-left: -20px; }
+.cr-list .nowti{ display: block; }
+.cog4{ padding: 90px 0 110px 0; }
+.banner .mbj{ display: none; }
+.ix-pro .pic2 img{ display: none; }
+.ip-nav{ display: none; }
