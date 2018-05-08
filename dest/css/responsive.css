@@ -172,7 +172,8 @@
 .ix-news .slick-dots {right: -45px; }
 .ix-pro .pa {padding-left: 40px; padding-right: 40px; }
 .ix-join .pa {padding: 55px 40px 0 40px; }
- } /* 1440 */
+.ix-join .txts2{ padding-left: 40px; padding-right: 40px; }
+} /* 1440 */
 @media screen and (max-width:1366px){
 .pw2,
 .pw {width: 1000px; }
@@ -258,6 +259,7 @@
 .banner .slick-dots {bottom: 25%; }
 .ix-pro .pa {padding-left: 30px; padding-right: 30px; }
 .ix-join .pa {padding: 45px 30px 0 30px; }
+.ix-join .txts2{ padding-left: 30px; padding-right: 30px; }
 .nd-l .nd-back {margin-top: 70px; }
 .pro-tour-box .txts {width: 365px; }
 .pro-tour-box .txts .pa {top: 25%; padding: 0 40px; }
@@ -615,6 +617,7 @@
 .ia-box .ix-ab{ width: 100%; }
 .ia-box .ix-join{ margin-top: 40px; }
 .ix-join .pa {padding: 55px 5% 75px 5%; }
+.ix-join .txts2{ padding-left: 5%; padding-right: 5%; }
 .ix-join .tx{ max-height: none; }
 .ix3 {padding-top: 70px; }
 .ix3 .ix-ab a {margin-right: 0; }
@@ -634,7 +637,7 @@
 .ly-pt-box{ overflow-y: auto; background: #e6e6e6; }
 .his-control{ display: none; }
 .ix-join .txts{ position: relative; }
-.ix-join .pic{ display: none; }
+.ix-join .picbox{ display: none; }
 .in-tx img{ display: block; width: 100%; }
 .in-tx{ position: relative; }
 .in-tx .txts{ position: absolute; left: 0; right: 0; top: 0; padding: 30px 5% 0 5%; }
@@ -686,6 +689,7 @@
 .ix-news{ margin-left: -15px; }
 .ix-pro .ip-aw{ display: none; }
 .nd-l .nd-back a{ padding-left: 15px; }
+.ix-join .picbox{ display: block; }
 } /* 641 */
 @media screen and (max-width:601px){
 .ai-shows .ma {margin-left: 4px; height: 130px; }
@@ -906,7 +910,6 @@
 .nd-l .nd-back a{ padding-left: 10px; padding-right: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .his-list .item + .item {margin-top: 20px; }
 .pro9 .pi-img-list {margin-bottom: 35px; }
-.ix-join .pic{ display: block; }
 .ix-join .pa{ padding-top: 35px; padding-bottom: 45px; }
 .nw1 .hot-news { margin-bottom: 25px; }
 .hot-news .pic{ display: block; width: 100%; float: none; }
@@ -962,6 +965,10 @@
 .gh-list a + a {margin-top: 20px; }
 .bd-list .name {font-size: 18px; }
 .bd-cta .bd-list {margin-top: 30px; }
+.ix-join .num span{ font-size: 38px; }
+.ix-join .ti {margin-top: 25px; font-size: 18px; }
+
+
 } /* 481 */
 @media screen and (max-width:361px){} /* 361 */
 @media screen and (max-width:321px){

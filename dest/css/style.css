@@ -701,11 +701,10 @@ a:hover {
 .ia-box .ix-join{ width: 45.11%; float: right; }
 .ix-join{ position: relative; color: #fff; overflow: hidden; }
 .ix-join a{ color: #fff; }
-.ix-join .txts{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #df2128 url('../images/ix_bg1.png') no-repeat -120px top/cover; -webkit-transform: translateY(100%); transform: translateY(100%); opacity: 0; visibility: hidden; -webkit-transition: opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; transition: opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 2s 700ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; }
+.ix-join .txts{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #df2128 url('../images/ix_bg1.png') no-repeat -120px top/cover; -webkit-transform: translateY(100%); transform: translateY(100%); opacity: 0; visibility: hidden; -webkit-transition: opacity 600ms, visibility 600ms, background 0ms 0ms, -webkit-transform 600ms; transition: opacity 600ms, visibility 600ms, background 0ms 0ms, -webkit-transform 600ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 0ms 0ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 0ms 0ms, -webkit-transform 600ms; }
 .ix-join .pa{ padding: 65px 50px 0 50px; }
 .ix-join .tx{ font-size: 15px; line-height: 30px; max-height: 120px; }
-
-.ix-join a:hover .txts{ -webkit-transform: none; transform: none; opacity: 1; visibility: visible; background-position: 0 top; } 
+.ix-join a:hover .txts{ -webkit-transform: none; transform: none; opacity: 1; visibility: visible; background-position: 0 top; -webkit-transition: opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; transition: opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 2s 700ms; transition: transform 600ms, opacity 600ms, visibility 600ms, background 2s 700ms, -webkit-transform 600ms; } 
 .ia-more a,
 .ia-more span{ display: inline-block; vertical-align: bottom; width: 126px; height: 36px; border: 2px solid #fff; line-height: 36px; text-align: center; }
 .ix-join .ia-more{ margin-top: 75px; }
@@ -1397,3 +1396,7 @@ html.open{ overflow: hidden; }
 .hot-news .nw-dot{ margin: 115px 0 0 7px; }
 .in-tx img{ display: none; }
 .ab-more.no{ display: none; }
+.ix-join .txts2{ position: absolute; left: 0; right: 0; bottom: 0; color: #333; padding: 0 50px 25px 50px; }
+.ix-join .num span{ display: block; margin-bottom: 2px; line-height: 0.8; font-size: 48px; font-weight: bold; color: #df2128; }
+.ix-join .ti{ margin-top: 40px; font-size: 22px; }
+.ix-join .picbox{ position: relative; }
