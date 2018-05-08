@@ -93,13 +93,22 @@ $(function () {
 	$(window).scroll(function () {
 		var windowTop = $(window).scrollTop();
 		if (windowTop < w_height && !isMobile) {
-			$('.pbanner .pic2 img').css('transform', "translate(0px," + (windowTop) / 1.5 + "px)");
+			$('.pbanner .pic2').css('transform', "translate(0px," + (windowTop) / 1.5 + "px)");
 		};
 		// changeHeader();
 		// changePnav();
 
 		changeTop();
     });
+    if($('.pro-nav').size()!=0){
+    	$('.pro-nav li').each(function(i) {
+    		$(this).css({
+                'transition-delay': i*100 + 'ms',
+                '-webkit-transition-delay': i*100 + 'ms'
+            }); 
+    	});
+    }
+    
  //    function changeHeader(){
 	// 	var ST = $(window).scrollTop();
 	// 	if(!isMobile){
